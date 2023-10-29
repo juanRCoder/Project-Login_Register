@@ -1,0 +1,189 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: instant;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #112238;
+    font-family: 'Roboto', sans-serif;
+}
+.login,.register {
+    user-select: none;
+    height: 13%;
+    width: 245px;
+    margin: 63px 0;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    font-size: 23px;
+    color: #0f4b65;
+    background-color: #bbcddc;
+    box-shadow: 0 4px 0px #5d8eb7;
+    transition-property: transform box-shadow;
+    transition-duration: .1s;
+}
+.login:active, .register:active {
+    box-shadow: 0 0px 0px #5d8eb7;
+    transform: translateY(4px);
+}
+span {
+    background-color: #3b3b5c4d;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+.boxLogin, .boxRegister {
+    background-color: #fff;
+    max-height: 100vh;
+    height: 72%;
+    max-width: 100vh;
+    width: 324px;
+    position: relative;
+}
+.boxRegister {
+    height: 83%;
+}
+.boxLogin>h1 , .boxRegister>h1{
+    text-align: center;
+    padding: 20% 0 0 0;
+    height: 25%;
+    font-size: 36px;
+    color: #607D8B;
+}
+.boxRegister>h1 {
+    padding: 10% 0 0 0;
+    height: 16%;
+}
+.boxLogin>p, .boxRegister>p {
+    color: #607D8B;
+    text-align: center;
+    font-size: 13px;
+    height: 5%;
+    margin-bottom: 8px;
+}
+.boxRegister>p {
+    height: 4%;
+}
+.boxLogin .redes , .boxRegister .redes{
+    width: 80%;
+    height: 18%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+}
+.boxRegister .redes {
+    height: 12%;
+    margin-bottom: 19px;
+}
+.redes_logo{
+    display: flex;
+    width: 20%;
+    flex-direction: column;
+}
+.box_img {
+    height: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: 1px solid #607D8B;
+    border-radius: 100%;
+}
+.re { height: 80%; }
+.box_img:hover {
+    background-color: #e8e8e8;
+}
+.box_img>img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: scale(.49)
+}
+.redes_logo>p, .p {
+    height: 50%;
+    margin-top: 6px;
+    text-align: center;
+    font-size: 12px;
+    color: #607D8B;
+}
+.redes_logo>.p {
+    height: 20%;
+}
+form {height: 50%;}
+
+form>label {
+    color: #607D8B;
+    display: block;
+    font-size: 15px;
+    height: 10%;
+    padding: 0 0 0px 15%;
+}
+
+form>input, .input {
+    color: #607D8B;
+    padding: 0 0 0 3%;
+    width: 70%;
+    height: 12%;
+    margin: 0px 15% 14px 15%;
+    border: 1px solid #c0b5b5;
+    outline: none;
+    font-size: 13px;
+    border-radius: 7px;
+}
+.input {
+    margin: -5px 15% 14px 15%;
+}
+form>[value='send'], form>[value='register'] {
+    color: #fff;
+    background-color: #18691d;
+    border: none;
+    cursor: pointer;
+    width: 40%;
+    height: 15%;
+    font-size: 15px;
+    border-radius: 5px;
+    margin: 10px 30% 0 30%;
+}
+form>[value='register'] {
+    font-size: 15px;
+    margin: 1px 30% 0 30%;
+}
+.btnlogin, .btnRegister {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 7px 5px 0 0;
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+}
+.btnlogin>.fa-solid , .btnRegister>.fa-solid {
+    transform: scale(1.8);
+    color: #34454c;
+}
+.SquareMSG {
+    width: 40%;
+    height: 9%;
+    background-color: #e10606;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 15px;
+    color: #fff;
+}

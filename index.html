@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b5e881eaf3.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Project-Login_Register</title>
+</head>
+<body class="body">
+    <div class="login">Login</div>
+    <div class="register">Register</div>
+    <span style="display: none;">
+        <div class="boxLogin">
+                <h1>Log-in</h1>
+                <p>Conectate con tus redes:</p>
+                <div class="redes">
+                    <div class="redes_logo">
+                        <div class="box_img"><img src="images/google.png"></div>
+                        <p>Google</p>
+                    </div>
+                    <div class="redes_logo">
+                        <div class="box_img"><img src="images/gorjeo.png"></div>
+                        <p>Twitter</p>
+                    </div>
+                    <div class="redes_logo">
+                        <div class="box_img"><img src="images/instagram.png"></div>
+                        <p>Instagram</p>
+                    </div>
+                </div>
+            <form>
+                <label for="name">Username:</label>
+                <input type="text" id="name" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <input type="submit" value="send" class="sendLogin">
+            </form>
+            <button class="btnlogin">
+                <i class="fa-solid fa-x"></i>
+            </button>
+        </div>
+        <div class="boxRegister">
+            <h1>Register</h1>
+            <p>Registrate con tus redes:</p>
+            <div class="redes">
+                <div class="redes_logo">
+                    <div class="box_img re"><img src="images/google.png"></div>
+                    <p class="p">Google</p>
+                </div>
+                <div class="redes_logo">
+                    <div class="box_img re"><img src="images/gorjeo.png"></div>
+                    <p class="p">Twitter</p>
+                </div>
+                <div class="redes_logo">
+                    <div class="box_img re"><img src="images/instagram.png"></div>
+                    <p class="p">Instagram</p>
+                </div>
+            </div>
+        <form>
+            <label for="fullName">FullName:</label>
+            <input type="text" class="input" id="fullName" name="fullName" required>
+            <label for="email">Email:</label>
+            <input type="email" class="input" id="email" name="email" required>
+            <label for="username">UserName:</label>
+            <input type="text" class="input" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" class="input" id="password" name="password" required>
+            <input type="submit" value="register" class="sendRegister">
+        </form>
+        <button class="btnlogin">
+            <i class="fa-solid fa-x"></i>
+        </button>
+        </div>
+    </span>
+    <script>
+        $(document).ready(() => {
+            
+            $('.login').click(() => { 
+                $('span').show();
+                $('.boxRegister').hide();
+                $('.boxLogin').show();
+            });
+
+            $('.register').click(() => { 
+                $('span').show();
+                $('.boxRegister').show();
+                $('.boxLogin').hide();
+            });
+
+            $('.btnlogin, .btnRegister').click(() =>  $('span').hide());
+
+            $('.sendLogin').click(() => alert("Datos enviados"));
+            $('.sendRegister').click(() => alert("Registrado"));
+        });
+    </script>
+</body>
+</html>
